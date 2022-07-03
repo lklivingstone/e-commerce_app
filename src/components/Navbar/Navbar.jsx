@@ -1,44 +1,39 @@
 import React from 'react';
-import { AppBar, Box, Toolbar, Typography, InputBase, Badge } from '@material-ui/core';
+import { AppBar, Box, Toolbar, Typography, InputBase, Badge, ListItemText, ListItemIcon, CssBaseline, useTheme, useMediaQuery } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartOutlined from '@material-ui/icons/ShoppingCartOutlined';
 import clsx from  'clsx';
-
+import theme from '../../styles/theme/theme'
+import Colors from "../../styles/theme/theme";
+import { ThemeProvider, Container } from '@material-ui/core'; 
 import useStyles from './styles';
 
-const Navbar = () => {
-    const classes= useStyles();
+import { MyList } from '../../styles/Navbar/Navbar';
+import { ListItemButton } from '@mui/material';
+import Tools from '../Tools/Tools';
+import NavbarMobile from './NavbarMobile';
+import NavbarDesktop from './NavbarDesktop';
+
+
+export default function Navbar() {
+
+    const theme= useTheme();
+    const matches= useMediaQuery(theme.breakpoints.down('md'));
 
     return (
-        <AppBar position= "static" style={{ background: '#2E3B55' }}>
-            <Toolbar className={classes.toolbar}>
-                <Box className={clsx(classes.search, classes.flexone)}>
-                    <div className={classes.searchIcon}>
-                        <SearchIcon />
-                    </div>
-                    <InputBase placeholder="Search" classes={{root:classes.inputRoot, input:classes.inputInput}}></InputBase>
-                </Box >
-                <Box className={classes.flexone}>
-                    <Typography variant="h5" style={{display: "flex", justifyContent: "center"}}>
-                    {/* className= {classes.title} */}
-                        tessst.
-                    </Typography>
-                </Box>
-                
-                <Box className={clsx(classes.flexone, classes.rightItems)} style={{display: "flex", justifyContent: "flex-end"}}>
-                    <Typography variant="h7" className={classes.marginBetween}>
-                        Register
-                    </Typography>
-                    <Typography variant="h7">
-                        Signin
-                    </Typography>
-                    <Badge badgeContent={4} color="primary" className= {classes.shoppingCartIcon}>
-                        <ShoppingCartOutlined fontSize="Small"/>
-                    </Badge>
-                </Box>
-            </Toolbar>
-        </AppBar>
-    )
+        <>
+            {matches ? (
+                <NavbarMobile matches={matches} />
+            ) : (
+                <NavbarDesktop matches={matches} />
+            )}
+        </>
+
+    );
 }
 
-export default Navbar;
+// {matches ? (
+//     <NavbarMobile matches={matches} />
+// ) : (
+//     <NavbarDesktop matches={matches} />
+// )}
