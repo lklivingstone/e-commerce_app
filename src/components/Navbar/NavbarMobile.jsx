@@ -1,23 +1,22 @@
 import { AppBar, CssBaseline, Box, Typography, Toolbar, IconButton, ListItemIcon } from "@material-ui/core";
 import theme from "../../styles/theme/theme";
-import useStyles from './styles';
-import { ThemeProvider, Container } from '@material-ui/core';
+import useStyles from '../../styles/Navbar/styles';
+import { ThemeProvider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { ListItemButton } from '@mui/material';
 import SearchIcon from '@material-ui/icons/Search';
-import Tools from "../Tools/Tools";
 
-import { FavoriteBorderOutlined, FavoriteOutlined, ShoppingCartOutlined } from "@material-ui/icons";
+import { FavoriteBorderOutlined, ShoppingCartOutlined } from "@material-ui/icons";
 import { MyList } from "../../styles/Navbar/Navbar";
-import { ToolsContainerMobile } from "./ToolbarMobile";
-
+import { ToolsContainerMobile } from "../Tools/ToolbarMobile";
+import Tools from '../Tools/Tools'
 
 export default function NavbarMobile({ matches }) {
     const classes= useStyles();
 
     return (
         <ThemeProvider theme={theme}>
-<CssBaseline />
+            <CssBaseline />
             <AppBar position= "static" >
                 <Toolbar className={classes.toolbar}>
                     <Box className={classes.flexone}>
@@ -27,7 +26,6 @@ export default function NavbarMobile({ matches }) {
                     </Box>
                     <Box className={classes.flexone}>
                         <Typography variant="h4" color="secondary" style={{display: "flex", justifyContent: "center"}}>
-                        
                             tessst.
                         </Typography>
                     </Box>
@@ -44,7 +42,7 @@ export default function NavbarMobile({ matches }) {
                     
                 </Toolbar>
             </AppBar>
-
+            {/* <Tools matches={matches} /> */}
             <ToolsContainerMobile>
                 <MyList type="row">
                     <ListItemButton
@@ -78,3 +76,5 @@ export default function NavbarMobile({ matches }) {
         </ThemeProvider>
     );
 }
+
+

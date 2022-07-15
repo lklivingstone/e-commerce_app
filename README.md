@@ -4,3 +4,4 @@ Dependencies I installed:
 3 npm install @material-ui/lab --legacy-peer-deps
 4 npm install @material-ui/icons --legacy-peer-deps
 5 npm install --save clsx
+6 npm install --save styled-components --legacy-peer-deps

@@ -1,6 +1,4 @@
-import { ListItemIcon, Box } from "@material-ui/core";
-import { FavoriteBorderOutlined, FavoriteOutlined, ShoppingCartOutlined } from "@material-ui/icons";
-import { ListItemButton } from "@mui/material";
+import { Box } from "@material-ui/core";
 import { styled } from "@material-ui/styles";
 import { Colors } from "../../styles/theme/theme";
 
