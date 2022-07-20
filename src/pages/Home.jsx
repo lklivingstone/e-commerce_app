@@ -5,6 +5,7 @@ import { CssBaseline } from '@material-ui/core';
 import { useEffect } from 'react';
 import theme from '../styles/theme/theme'
 import Slider from '../components/Slider/Slider';
+import Categories from '../components/categories/Categories';
 
 const Home = () => {
     //Title of the page. Runs only once.
@@ -21,6 +22,7 @@ const Home = () => {
         <ThemeProvider theme={theme}>
             <Navbar />
             <Slider />
+            <Categories />
         </ThemeProvider>
         </>
     )

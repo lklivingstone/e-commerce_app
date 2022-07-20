@@ -8,21 +8,35 @@ export const sliderItems = [
         image: require("../images/winter-sale.png"),
         title: "WINTER SALE",
         desc: "DONT MISS OUT ON THE MASSIVE SALE! FLAT 30% ON ALL ITEMS",
-        bg: "#edd38a",
     },
     {
         id: 2,
         image: require("../images/summer-sale.png"),
         title: "SUMMER SALE",
         desc: "GRAB THE NEW SUMMER ARRIVALS! FLAT 40% ON NEW ARRIVALS",
-        bg: "#abc470",
     },
     {
         id: 3,
         image: require("../images/end-of-season-sale.png"),
         title: "END OF SEASON SALE",
         desc: "ITS THE SEASON END! FLAT 50% ON EVERY ITEM",
-        bg: "#78979c",
     }
 ];
 
+export const categories = [
+    {
+        id: 1,
+        img: require("../images/shirt.png"),
+        title: "NEW ARRIVALS!",
+    },
+    {
+        id: 2,
+        img: require("../images/trousers.jpeg"),
+        title: "CURRENT CRUSH",
+    },
+    {
+        id: 3,
+        img: require("../images/jacket.jpeg"),
+        title: "TOP PICKS FOR YOU",
+    },
+];
