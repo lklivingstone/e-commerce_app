@@ -1,7 +1,7 @@
 import { createTheme } from "@material-ui/core/styles";
 
 export const Colors = {
-  primary: "#283454",
+  primary: "#000512",
   secondary: "#e1e6f5",
   success: "#4CAF50",
   info: "#00a2ff",

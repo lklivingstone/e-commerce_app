@@ -14,12 +14,15 @@ const Wrapper = styled("div")({
     margin: "3px",
     height: "70vh",
     position: "relative",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
 })
 
 const Image = styled("img")({
-    width: "100%",
-    height: "100%",
-    objectFit: "cover"
+    width: "80%",
+    height: "80%",
+    objectFit: "cover",
 })
 
 const InfoCont = styled("div")({
@@ -36,20 +39,21 @@ const InfoCont = styled("div")({
 
 const Title = styled("h1")({
     fontWeight: 500,
+    fontSize: "21px",
     letterSpacing: "3px"
 })
 
 const Button = styled("Button")({
-    fontSize: "20px",
+    fontSize: "17px",
     background: "transparent",
-    padding: "15px 20px",
+    padding: "8px 20px",
     cursor: "pointer"
 })
 
 const Categories = () => {
     return <Container>
             {categories.map((item)=> (
-                <Wrapper>
+                <Wrapper key={item.id}>
                     <Image src={item.img} />
                     <InfoCont>
                         <Title>{item.title}</Title>
